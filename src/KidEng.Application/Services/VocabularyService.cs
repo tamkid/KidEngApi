@@ -37,9 +37,7 @@ namespace KidEng.Application.Services
         {
             var vob = _mapper.Map<Vocabulary>(model);
             var vobAdded = await _repo.AddAsync(vob);
-            if(vobAdded != null)
-                return vobAdded.Id;
-            return 0;
+            return vobAdded.Id;
         }
 
         public async Task Delete(int id)
