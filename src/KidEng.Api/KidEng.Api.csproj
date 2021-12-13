@@ -13,4 +13,8 @@
     <ProjectReference Include="..\KidEng.Infrastructure\KidEng.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
