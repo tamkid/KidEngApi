@@ -12,7 +12,7 @@ namespace KidEng.Infrastructure
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<KidEngContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("KidEng"))
+                options.UseSqlServer(configuration.GetConnectionString("KidEngConnectionString"))
             );
             services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
             services.AddScoped<IVocabularyRepository, VocabularyRepository>();

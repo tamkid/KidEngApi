@@ -32,6 +32,7 @@ namespace KidEng.Api.Extensions
                 }
                 catch (SqlException ex)
                 {
+                    logger.LogError(ex, "Exception Migration database");
                     if (retryForAvailability < 50)
                     {
                         retryForAvailability++;
